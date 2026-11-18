@@ -1,0 +1,10 @@
+{
+  "$comment": "Contract between this repo and Proof. See https://github.com/crypticsaiyan/proof",
+  "name": "kiln-and-kettle",
+  "start": "node src/dev.js",
+  "portEnv": "PORT",
+  "health": "/healthz",
+  "unit": "npm test --silent",
+  "regressions": "tests/regressions",
+  "protected": ["tests/regressions/**", "test/**", "proof.config.json"]
+}

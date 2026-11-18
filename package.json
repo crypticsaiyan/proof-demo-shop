@@ -1,0 +1,19 @@
+{
+  "name": "proof-demo-shop",
+  "private": true,
+  "type": "module",
+  "description": "Kiln & Kettle: a tiny demo store used to show Proof catching and fixing real bugs.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch src/dev.js",
+    "start": "node src/dev.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.9",
+    "hono": "^4.13.19"
+  }
+}
