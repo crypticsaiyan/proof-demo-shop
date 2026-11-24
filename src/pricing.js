@@ -32,6 +32,8 @@ export function priceCart(cart) {
       discount += coupon.value;
     }
   }
+  // A discount can never exceed the goods; otherwise the total goes negative and payment fails.
+  discount = Math.min(discount, subtotal);
 
   const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING_OVER ? 0 : SHIPPING;
   const total = subtotal - discount + shipping;
