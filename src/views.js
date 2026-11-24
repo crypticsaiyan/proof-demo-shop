@@ -124,7 +124,7 @@ export function cartPage({ priced, cart, error, notice }) {
 <div class="cart">
   <div class="panel">
   ${priced.lines.map(
-    (l) => html`<div class="line">
+    (l) => html`<div class="line" data-proof-context="${l.name}">
     <div class="thumb" style="background:${l.color}"></div>
     <div><a href="/product/${l.id}">${l.name}</a><div class="blurb">${money(l.price)} each</div></div>
     <form method="post" action="/cart/qty" class="qty">
