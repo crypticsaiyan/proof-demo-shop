@@ -32,6 +32,7 @@ export function priceCart(cart) {
       discount += coupon.value;
     }
   }
+  discount = Math.min(discount, subtotal);
 
   const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING_OVER ? 0 : SHIPPING;
   const total = subtotal - discount + shipping;
