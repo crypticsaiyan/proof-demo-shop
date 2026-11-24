@@ -3,7 +3,7 @@
 let seq = 1000;
 
 export function charge({ amount, email }) {
-  if (!Number.isInteger(amount) || amount < 0) {
+  if (!Number.isInteger(amount)) {
     throw new Error(`PaymentError: invalid amount ${amount}`);
   }
   if (!email || !email.includes('@')) {
